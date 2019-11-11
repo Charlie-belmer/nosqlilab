@@ -10,7 +10,7 @@ services:
     networks:
       - nosqli-network
     ports:
-      - "8080:80"
+      - "8081:80"
   mongo:
     container_name: nosqli-mongodb
     image: mongo:3.4.1
@@ -19,8 +19,8 @@ services:
       dockerfile: Dockerfile-mongo
     networks:
       - nosqli-network
-    ports:
-      - "27017:27017"
+    #ports:
+    #  - "27018:27017"
 
 networks:
   nosqli-network:
